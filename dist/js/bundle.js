@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.js */ \"./src/js/test.js\");\n// Global app controller\r\n\r\nconsole.log(_test_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], 'Imported');\r\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.js */ \"./src/js/test.js\");\n// Global app controller\n\nconsole.log(_test_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], 'Imported');\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -106,7 +106,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tes
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('import');\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (12);\n\n//# sourceURL=webpack:///./src/js/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('import');\n/* harmony default export */ __webpack_exports__[\"default\"] = (12);\n\nvar bruh = function bruh() {\n  console.log('bruh');\n};\n\nbruh();\n\n//# sourceURL=webpack:///./src/js/test.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!*******************************!*\
+  !*** multi ./src/js/index.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__(/*! ./src/js/index.js */\"./src/js/index.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/index.js?");
 
 /***/ })
 
