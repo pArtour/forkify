@@ -61,9 +61,9 @@ const controlRecipe = async () => {
     // Creatong Recipe obj
     state.recipe = new Recipe(id);
     try {
-      // Get Recipe data
+      // Get Recipe data and parse ingredients
       await state.recipe.getRecipe();
-  
+      state.recipe.parseIngredients();
       // Calculate servings and time
       state.recipe.calcTime();
       state.recipe.calcServings();
