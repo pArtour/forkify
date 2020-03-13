@@ -59,7 +59,11 @@ const controlRecipe = async () => {
   if (id) {
     // Prepare UI for changes
     recipeView.clearRecipe();
-    renderLoader(elements.recipe)
+    renderLoader(elements.recipe);
+
+    // Highlidht the selected 
+    if(state.search) searchView.highlightSelected(id);
+  
     // Creatong Recipe obj
     state.recipe = new Recipe(id);
     try {
