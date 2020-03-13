@@ -1,6 +1,7 @@
 import Search from './modules/Search';
 import Recipe from './modules/Recipe';
 import * as searchView from './views/search-view';
+import * as recipeView from './views/recipe-view';
 import { elements, renderLoader, clearLoader } from './views/base';
 
 // Global state of the app
@@ -57,7 +58,8 @@ const controlRecipe = async () => {
 
   if (id) {
     // Prepare UI for changes
-
+    recipeView.clearRecipe();
+    renderLoader(elements.recipe)
     // Creatong Recipe obj
     state.recipe = new Recipe(id);
     try {
@@ -69,7 +71,8 @@ const controlRecipe = async () => {
       state.recipe.calcServings();
   
       // Render recipe
-      console.log(state.recipe);
+      clearLoader();
+      recipeView.renderRecipe(state.recipe);
       
     } catch (error) {
       alert('Error processing recipe!');
