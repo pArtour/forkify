@@ -1,14 +1,16 @@
 import Search from './modules/Search';
+import Recipe from './modules/Recipe';
 import * as searchView from './views/search-view';
 import { elements, renderLoader, clearLoader } from './views/base';
+
 // Global state of the app
 // * - Search object
 // * - Current recipe object
 // * - Shopping list object
 // * - Liked recipes
-
 const state = {};
 
+// * Search controller
 const controlSearch = async () => {
   // 1) get query from view
   const query = searchView.getInput() // to do
@@ -31,3 +33,18 @@ elements.searchForm.addEventListener('submit', event => {
   event.preventDefault();
   controlSearch();
 });
+
+elements.searchResPages.addEventListener('click', event => {
+  const btn = event.target.closest('.btn-inline');
+  if (btn) {
+    const goToPage = parseInt(btn.dataset.goto, 10);
+    searchView.clearResults();
+    searchView.renderResults(state.search.result, goToPage);
+  };
+});
+
+// Recipe controller
+
+const r = new Recipe(46956);
+r.getRecipe();
+console.log(r);
