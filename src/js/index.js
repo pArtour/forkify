@@ -16,7 +16,6 @@ import { elements, renderLoader, clearLoader } from './views/base';
 
 const state = {};
 
-window.state = state;
 // * Search controller
 const controlSearch = async () => {
   // 1) get query from view
@@ -60,8 +59,6 @@ elements.searchResPages.addEventListener('click', event => {
 const controlRecipe = async () => {
   // Get ID from url
   const id = window.location.hash.replace('#', '');
-  console.log(id);
-
   if (id) {
     // Prepare UI for changes
     recipeView.clearRecipe();
@@ -103,8 +100,6 @@ const controlList = () => {
     listView.renderItem(item);
   });
 };
-
-
 
 // handle delete and update list items events
 elements.shopping.addEventListener('click', event => {
