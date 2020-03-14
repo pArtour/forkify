@@ -1,5 +1,6 @@
 import Search from './modules/Search';
 import Recipe from './modules/Recipe';
+import List from './modules/List';
 import * as searchView from './views/search-view';
 import * as recipeView from './views/recipe-view';
 import { elements, renderLoader, clearLoader } from './views/base';
@@ -100,3 +101,10 @@ elements.recipe.addEventListener('click', event => {
  }
  console.log(state.recipe);
 });
+
+const l = new List();
+
+window.l = l;
+
+
+
